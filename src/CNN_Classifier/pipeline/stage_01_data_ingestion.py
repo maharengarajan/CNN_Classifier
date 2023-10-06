@@ -1,8 +1,9 @@
 from CNN_Classifier.config import ConfigurationManager
-from CNN_Classifier.components import DataIngestion 
+from CNN_Classifier.components import DataIngestion
 from CNN_Classifier import logger
 
 STAGE_NAME = "Data Ingestion stage"
+
 
 def main():
     config = ConfigurationManager()
@@ -11,7 +12,8 @@ def main():
     data_ingestion.download_file()
     data_ingestion.unzip_and_clean()
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     try:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         main()
@@ -19,4 +21,3 @@ if __name__=='__main__':
     except Exception as e:
         logger.exception(e)
         raise e
-
