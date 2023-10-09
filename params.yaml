@@ -1,2 +1,8 @@
-
 AUGMENTATION: True
+IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
+BATCH_SIZE: 16
+INCLUDE_TOP: False   # only CNN not ANN
+EPOCHS: 1
+CLASSES: 2    # cat & Dog
+WEIGHTS: imagenet  #imagenet is a dataset, VGG16 trained of this dataset
+LEARNING_RATE: 0.01
