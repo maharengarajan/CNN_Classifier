@@ -1,1 +1,8 @@
-AUGMENTATION: True
+stages:
+  data_ingestion:
+    cmd: python src/CNN_Classifier/pipeline/stage_01_data_ingestion.py
+    deps:
+      - src/CNN_Classifier/pipeline/stage_01_data_ingestion.py
+      - configs/config.yaml
+    outs:
+      - artifacts/data_ingestion/PetImages
