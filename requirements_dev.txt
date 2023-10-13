@@ -12,6 +12,8 @@ ensure
 joblib
 types-PyYAML
 scipy
+mlflow
+scikit-learn
 -e . 
 
 
